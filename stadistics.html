@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Ghibli</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@600&family=Oswald:wght@300&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="banner-one" id="banner-one">
+      <nav class="banner-one-content container">
+        <a href="index.html#filmsGhibli" class="nav-text">Films</a>
+        <img src="./img/logo.png" alt="logo1" class="img-logo1" />
+        <a href="stadistics.html" class="nav-text">Statistics</a>
+      </nav>
+    </header>
+    <main class="banner-three" id="banner-three">
+      <section class="banner-three-content container">
+        <div class="statistics">
+          <h1 class="h1-text">How many species are there of each character?</h1>
+          <p class="p-text">
+            The graph below shows the number of character species
+          </p>
+          <canvas
+            class="chart-js"
+            id="chart-js"
+    
+          ></canvas>
+        </div>
+      </section>
+    </main>
+    <footer class="information">
+      <article class="disclaimer">
+        <p class="text-disclaimer">© 2023 DATAGHIBLI</p>
+      </article>
+    </footer>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="stadistics.js" type="module"></script>
+  </body>
+</html>

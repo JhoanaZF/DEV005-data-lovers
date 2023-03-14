@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Ghibli</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@600&family=Oswald:wght@300&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="banner-one" id="banner-one">
+      <nav class="banner-one-content container">
+        <a href="index.html#filmsGhibli" class="nav-text">Films</a>
+        <img src="./img/logo.png" alt="logo1" class="img-logo1" />
+        <a href="stadistics.html" class="nav-text">Statistics</a>
+      </nav>
+    </header>
+    <main class="banner-two" id="banner-two">
+      <section class="banner-two-content container">
+        <article class="buttons-model">
+          <article class="buttons-design">
+            <p class="text-buttons">Filter by :</p>
+            <select class="select-buttons" id="buttons-filter">
+              <option value="">Director</option>
+            </select>
+          </article>
+          <article class="buttons-design">
+            <p class="text-buttons">Order by :</p>
+            <select class="select-buttons" id="buttons-order">
+              <option value="">Alphabet</option>
+              <option value="a-z">A - Z</option>
+              <option value="z-a">Z - A</option>
+            </select>
+          </article>
+          <article class="buttons-design">
+            <p class="text-buttons">Search by:</p>
+            <input
+              type="search"
+              placeholder="Films"
+              class="select-buttons plusOne"
+              id="buttons-search"
+            />
+          </article>
+          <input
+            type="button"
+            class="select-buttons plusTwo"
+            id="buttons-restore"
+            value="Restore"
+          />
+        </article>
+        <section class="cards-model" id="cards-model"></section>
+      </section>
+    </main>
+    <footer class="information">
+      <article class="disclaimer">
+        <p class="text-disclaimer">© 2023 DATAGHIBLI</p>
+      </article>
+    </footer>
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
