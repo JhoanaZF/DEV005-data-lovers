@@ -1,50 +1,52 @@
 import data from "./data/ghibli/ghibli.js";
-const information = () => {
-  let speciesTotal = [];
+const transformDataSpecies = () => {
+  let totalSpecies = [];
   data.films.map((item) => {
-    const containerSpecies = item.people.map((i) => {
-      return i.specie;
+    const moreSpecies = item.people.map((item) => {
+      return item.specie;
     });
-    speciesTotal = [...speciesTotal, ...containerSpecies];
-    return containerSpecies;
+
+    totalSpecies = [...totalSpecies, ...moreSpecies];
+    return moreSpecies;
   });
-  const countSpecie = {};
-  speciesTotal.map((item) => {
-    if (countSpecie[item]) {
-      countSpecie[item]++;
+
+  const countSpecies = {};
+  totalSpecies.map((item) => {
+    if (countSpecies[item]) {
+      countSpecies[item]++;
     } else {
-      countSpecie[item] = 1;
+      countSpecies[item] = 1;
     }
   });
-  return countSpecie;
+  return countSpecies;
 };
 const stadistics = () => {
-  const countspecies = information();
-  const amountSpecies = Object.values(countspecies);
-  const nameSpecies = Object.keys(countspecies);
-  const ctx = document.querySelector("#chart-js");
-  new Chart(ctx, {
+  const dataSpecies = transformDataSpecies();
+  const amountSpecies = Object.values(dataSpecies);
+  const typeSpecies = Object.keys(dataSpecies);
+  const graphic = document.querySelector("#chart-js");
+  new Chart(graphic, {
     type: "pie",
     data: {
-      labels: nameSpecies,
+      labels: typeSpecies,
       datasets: [
         {
           label: "# of Characters",
           data: amountSpecies,
-          borderWidth: 0,
-          backgrounColor: [
-            "rgb(64, 224, 208)",
-            "rgb(224, 255, 255)",
+          borderWidth: 1,
+          backgroundColor: [
+            "rgb(250, 237, 205)",
+            "rgb(162, 210, 255)",
             "rgb(173, 216, 230)",
-            "rgb(255, 250, 205)",
-            "rgb(240, 128, 128)",
-            "rgb(255, 182, 193)",
-            "rgb(32, 178, 170)",
-            "rgb(135, 206, 250)",
-            "rgb(144, 238, 144)",
-            "rgb(102, 205, 170)",
-            "rgb(147, 112, 219)",
-            "rgb(255, 228, 181)",
+            "rgb(255, 175, 204)",
+            "rgb(127, 255, 212)",
+            "rgb(138, 43, 226)",
+            "rgb(237, 237, 233)",
+            "rgb(127, 255, 0)",
+            "rgb(0, 100, 0)",
+            "rgb(255, 20, 147)",
+            "rgb(0, 191, 255)",
+            "rgb(255, 215, 0)",
             "rgb(219, 112, 147)",
             "rgb(250, 128, 114)",
             "rgb(112, 128, 144)",
@@ -52,7 +54,7 @@ const stadistics = () => {
             "rgb(216, 191, 216)",
             "rgb(164, 224, 208)",
             "rgb(186, 85, 211)",
-            "rgb(188, 143, 143)",
+            "rgb(0, 0, 0)",
             "rgb(230, 230, 250)",
           ],
         },
@@ -62,6 +64,9 @@ const stadistics = () => {
       plugins: {
         legend: {
           position: "left",
+          labels: {
+            color: "white",
+          },
         },
       },
     },
