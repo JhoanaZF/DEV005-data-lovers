@@ -33,7 +33,7 @@ const stadistics = () => {
         {
           label: "# of Characters",
           data: amountSpecies,
-          borderWidth: 1,
+          borderWidth: 0,
           backgroundColor: [
             "rgb(250, 237, 205)",
             "rgb(162, 210, 255)",
