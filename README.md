@@ -23,20 +23,23 @@ La primera interface muestra los posters de las veinte películas producidas y d
 ## 3. Historias de usuario
 
 ¿Quiénes son los principales usuarios de producto?
+
 Público en general que disfrute de las películas de Studio Ghibli y quiera conocer más.
 
 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+
 Tiene como objetivo saber y conocer más sobre las películas del Studio Ghibli.
 
 ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+
 Quieren una página web accesible donde puedan ver las películas y se les permita filtrar, ordenar y buscar.
 
 ¿Cuándo utilizan o utilizarían el producto?
+
 Cuando quieran buscar alguna película o curiosidad sobre el Studio Ghibli.
 
-HU1: Yo como usuaria de Data Lovers quiero que se muestre las películas del Studio Ghibli para ver que películas tienen.
 
-Criterios de aceptación:
+HU1: Yo como usuaria de Data Lovers quiero que se muestre las películas del Studio Ghibli para ver que películas tienen.
 
 - Al abrir la página que me muestre las imágenes de las peliculas y el nombre de cada película.
 
