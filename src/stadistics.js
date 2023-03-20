@@ -1,4 +1,5 @@
 import data from "./data/ghibli/ghibli.js";
+
 const transformDataSpecies = () => {
   let totalSpecies = [];
   data.films.map((item) => {
@@ -20,6 +21,7 @@ const transformDataSpecies = () => {
   });
   return countSpecies;
 };
+
 const stadistics = () => {
   const dataSpecies = transformDataSpecies();
   const amountSpecies = Object.values(dataSpecies);

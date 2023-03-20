@@ -6,14 +6,16 @@ import {
 } from "./data.js";
 
 import data from "./data/ghibli/ghibli.js";
+
 const listFilms = document.querySelector("#cards-model");
 const buttonFilter = document.querySelector("#buttons-filter");
 const buttonOrder = document.querySelector("#buttons-order");
 const buttonSearch = document.querySelector("#buttons-search");
 const buttonRestore = document.querySelector("#buttons-restore");
+
 let dataFilms = data.films;
 
-const renderizarFilms = () => {
+const showFilms = () => {
   listFilms.innerHTML = "";
   dataFilms.forEach((film) => {
     const { poster, title } = film;
@@ -36,17 +38,17 @@ const renderizarFilms = () => {
   });
 };
 
-renderizarFilms();
+showFilms();
 
 buttonFilter.addEventListener("change", (e) => {
   const directorSelected = e.target.value;
   if (directorSelected === "") {
     dataFilms = data.films;
-    renderizarFilms();
+    showFilms();
   } else {
     const dataFilter = filterByDirector(data.films, directorSelected);
     dataFilms = [...dataFilter];
-    renderizarFilms();
+    showFilms();
   }
 });
 
@@ -80,19 +82,18 @@ buttonOrder.addEventListener("change", (e) => {
     const dataFilter = orderZaByTitle(dataFilms);
     dataFilms = [...dataFilter];
   }
-  renderizarFilms();
+  showFilms();
 });
 
 buttonSearch.addEventListener("search", (e) => {
   const keyValue = e.target.value.toLowerCase();
   if (keyValue === "") {
     dataFilms = data.films;
-
-    renderizarFilms();
+    showFilms();
   } else {
     const dataFilter = searchByTitle(data.films, keyValue);
     dataFilms = [...dataFilter];
-    renderizarFilms();
+    showFilms();
   }
 });
 
@@ -101,5 +102,5 @@ buttonRestore.addEventListener("click", () => {
   document.querySelector("#buttons-order").value = "";
   document.querySelector("#buttons-search").value = "";
   dataFilms = data.films;
-  renderizarFilms();
+  showFilms();
 });
