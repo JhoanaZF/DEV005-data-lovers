@@ -53,12 +53,12 @@ buttonFilter.addEventListener("change", (e) => {
 });
 
 const directorsHTML = () => {
-  const dataFilms = data.films.map((film) => {
+  const dataDirectorFilms = data.films.map((film) => {
     return film.director;
   });
 
-  const filmsDirectorsUnique = dataFilms.filter((film, posicion) => {
-    return dataFilms.indexOf(film) === posicion;
+  const filmsDirectorsUnique = dataDirectorFilms.filter((film, posicion) => {
+    return dataDirectorFilms.indexOf(film) === posicion;
   });
 
   filmsDirectorsUnique.forEach((director) => {
